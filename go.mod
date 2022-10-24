@@ -1,3 +1,3 @@
-module gitlab.avatarworks.com/servers/component/hj-ioc
+module github.com/archine/ioc
 
 go 1.18

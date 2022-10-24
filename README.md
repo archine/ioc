@@ -4,29 +4,19 @@
 
 ## 一、前言
 
-### 1、基础条件
-
-引入前需检查本地环境是否设置了 `GOPRIVATE`变量, 如未配置需先进行配置，可通过配置操作系统的变量或者通过在命令行执行下方的命令，否则无法拉取包
-
-```shell
-go env -w GOPRIVATE=gitlab.avatarworks.com
-
-go env -w GOINSECURE=gitlab.avatarworks.com
-```
-
-### 2、🚀🚀安装
+### 🚀🚀安装
 
 - Get
 
 ```shell
-go get gitlab.avatarworks.com/servers/component/hj-ioc@v1.0.0
+go get github.com/archine/ioc@v1.0.0
 ```
 
 - Mod
 
 ```shell
 # go.mod文件加入下面的一条
-gitlab.avatarworks.com/servers/component/hj-ioc v1.0.0
+github.com/archine/ioc v1.0.0
 # 命令行在该项目目录下执行
 go mod tidy
 ```
@@ -42,7 +32,7 @@ package main
 
 import (
 	"fmt"
-	"gitlab.avatarworks.com/servers/component/hj-ioc"
+	"github.com/archine/ioc"
 )
 
 type UserController struct {
@@ -79,7 +69,7 @@ package main
 
 import (
 	"fmt"
-	"gitlab.avatarworks.com/servers/component/hj-ioc"
+	"github.com/archine/ioc"
 )
 
 type UserController struct {
@@ -109,7 +99,7 @@ package main
 
 import (
 	"fmt"
-	"gitlab.avatarworks.com/servers/component/hj-ioc"
+	"github.com/archine/ioc"
 )
 
 type UserController struct {
