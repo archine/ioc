@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/version-v1.0.0-green.svg) &nbsp; ![](https://img.shields.io/badge/builder-success-green.svg) &nbsp;
+![](https://img.shields.io/badge/version-v1.0.1-green.svg) &nbsp; ![](https://img.shields.io/badge/builder-success-green.svg) &nbsp;
 
 > 📢📢📢 IOC依赖注入，对项目全局实例化对象进行管理，自动对结构体属性进行初始化，摆脱随处可见的 new
 
@@ -9,14 +9,14 @@
 - Get
 
 ```shell
-go get github.com/archine/ioc@v1.0.0
+go get github.com/archine/ioc@v1.0.1
 ```
 
 - Mod
 
 ```shell
 # go.mod文件加入下面的一条
-github.com/archine/ioc v1.0.0
+github.com/archine/ioc v1.0.1
 # 命令行在该项目目录下执行
 go mod tidy
 ```

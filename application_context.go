@@ -1,6 +1,8 @@
 package ioc
 
-import "reflect"
+import (
+	"reflect"
+)
 
 // Global Bean instance container
 var beanCache = make(map[string]interface{})
@@ -9,7 +11,7 @@ var beanCache = make(map[string]interface{})
 // Declare struct instances to ioc control
 type Bean interface {
 	// CreateBean
-	// Initializes the structure entity
+	// Initializes bean
 	CreateBean() Bean
 }
 
@@ -81,6 +83,15 @@ func GetBean(beanStruct interface{}) interface{} {
 		typeOf = typeOf.Elem()
 	}
 	bean, ok := beanCache[typeOf.String()]
+	if ok {
+		return bean
+	}
+	return nil
+}
+
+// GetBeanByName query bean by name
+func GetBeanByName(beanName string) interface{} {
+	bean, ok := beanCache[beanName]
 	if ok {
 		return bean
 	}
